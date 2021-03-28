@@ -4,6 +4,8 @@ import {
   Nav,
   NavLink,
 } from 'reactstrap';
+import '../Navbar.css'
+
 
 function navbar() {
   return (
