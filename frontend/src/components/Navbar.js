@@ -10,7 +10,7 @@ function navbar() {
     <div>
       <Navbar className="color-nav">
         <Nav>
-        <NavbarBrand className ="color-text" href="./views/LandingPage.js">Pet Finder</NavbarBrand>
+        <NavbarBrand className ="color-text" href="/">Pet Finder</NavbarBrand>
         <NavLink className="color-text" href="/">Matches</NavLink>
         </Nav>
       </Navbar>
