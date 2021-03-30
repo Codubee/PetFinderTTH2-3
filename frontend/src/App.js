@@ -3,13 +3,11 @@ import LandingPage from './views/LandingPage'
 import Navbar from './components/Navbar.js'
 
 function App() {
-    return (
-      <div>
-      <Navbar/>
-      <LandingPage/>
-      
-      </div>
-    );
-  };
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
+};
 
 export default App;
