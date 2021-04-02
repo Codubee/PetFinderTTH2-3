@@ -19,7 +19,7 @@ const emojis = [
 
 function Features() {
     return (
-        <div class="container">
+        <div class="features-container">
             <h1>Pet Finder Features</h1>
 
             <ul class="center">
