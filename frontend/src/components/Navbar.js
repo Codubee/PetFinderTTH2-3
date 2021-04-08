@@ -12,8 +12,8 @@ function navbar() {
     <div>
       <Navbar className="color-nav">
         <Nav>
-        <NavbarBrand className ="color-text" href="/">Pet Finder</NavbarBrand>
-        <NavLink className="color-text" href="/">Matches</NavLink>
+          <NavbarBrand className="color-text" href="/">Pet Finder</NavbarBrand>
+          <NavLink className="color-text" href="/">Matches</NavLink>
         </Nav>
       </Navbar>
     </div>
