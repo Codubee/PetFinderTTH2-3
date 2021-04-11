@@ -1,10 +1,11 @@
 import React from 'react'
+import '../styles/Tools.css'
 
 function Tools(){
     return ( 
-        <div class= "container" style={{textAlign:"center"}}>
+        <div className= "container text-center" >
             <h4>Tools include:</h4>
-            <div style={{textAlign:"left", display:"inline-block"}}>
+            <div className="tools-list">
                 <ul>
                     <li>React</li>
                     <li>NodeJS</li>
