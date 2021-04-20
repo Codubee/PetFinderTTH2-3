@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 
+/* This function displays the matches in a bordered table  */
 const DisplayMatches = (props) => {
   return (
     <Table bordered>
@@ -22,14 +23,6 @@ const DisplayMatches = (props) => {
           <td>Female</td>
           <td>Shelter</td>
           <td>example.com</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Ruff2</td>
-          <td>Dog2</td>
-          <td>Female</td>
-          <td>Shelter2</td>
-          <td>example2.com</td>
         </tr>
       </tbody>
     </Table>
