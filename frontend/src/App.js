@@ -1,7 +1,7 @@
 import './App.css';
 import LandingPage from './views/LandingPage';
 import Navbar from './components/Navbar.js';
-
+import Match from './views/Match'
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,11 +13,13 @@ function App() {
     <div>
       <div>
           <Navbar />
-
           <Router>
             <Switch>
-              <Route path="/">
+              <Route exact path="/">
                 <LandingPage />
+              </Route>
+              <Route path="/match">
+                <Match />
               </Route>
             </Switch>
           </Router>
