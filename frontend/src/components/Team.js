@@ -1,9 +1,9 @@
 import React from 'react';
-import img1 from './Assets/Aashritha.jpg'
-import img2 from './Assets/Ashleigh.jpg'
-import img3 from './Assets/Brie.jpg'
-import img4 from './Assets/Hannah.jpg'
-import img5 from './Assets/Shivani.jpg'
+import img1 from '../Assets/Aashritha.jpg'
+import img2 from '../Assets/Ashleigh.jpg'
+import img3 from '../Assets/Brie.jpg'
+import img4 from '../Assets/Hannah.jpg'
+import img5 from '../Assets/Shivani.jpg'
 
 import {
   Card, CardText, CardBody, CardImg,

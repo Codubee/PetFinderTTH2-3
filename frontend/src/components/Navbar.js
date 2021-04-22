@@ -4,7 +4,7 @@ import {
   Nav,
   NavLink,
 } from 'reactstrap';
-import '../Navbar.css'
+import '../styles/Navbar.css'
 
 
 function navbar() {
@@ -13,7 +13,7 @@ function navbar() {
       <Navbar className="color-nav">
         <Nav>
           <NavbarBrand className="color-text" href="/">Pet Finder</NavbarBrand>
-          <NavLink className="color-text" href="/">Matches</NavLink>
+          <NavLink className="color-text" href="/match">Matches</NavLink>
         </Nav>
       </Navbar>
     </div>
