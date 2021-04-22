@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .container {
+=======
+.features-container {
+>>>>>>> main
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,9 +12,12 @@
     margin: 0 20px;
     list-style: none;
     padding: 0;
+<<<<<<< HEAD
 }
 
 .center {
     display: flex;
     padding: 0;
+=======
+>>>>>>> main
 }
