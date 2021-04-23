@@ -1,0 +1,15 @@
+.table-color{
+    background-color: #E4A58F;
+}
+
+.text-color{
+    color: white;
+}
+
+.url-color{
+    color: black 
+}
+.url-color:hover{
+    color: #E4A58F; 
+
+}
