@@ -5,7 +5,7 @@ app.use(express.json());
 
 /* function which receives the animal data in the body or postman and adds it to a specific user */
 app.post('/addAnimal', function (req, res) {
-    axios.post('https://codubee-projects-api.herokuapp.com/animal/addAnimal') // use axios to call /addAnimal
+    axios.post('https://codubee-projects-api.herokuapp.com/animal/addAnimal', req.body) // use axios to call /addAnimal
         .then(function (response) {
             // handle success and send back a 200 response with the data
             console.log(response.data);
