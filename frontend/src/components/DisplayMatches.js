@@ -14,7 +14,7 @@ const DisplayMatches = (props) => {
 
   return (
     <Table bordered>
-      <div>
+
         <thead className="table-color">
           <tr className="text-color">
             <th></th>
@@ -25,9 +25,10 @@ const DisplayMatches = (props) => {
             <th>Adoption Url</th>
           </tr>
         </thead>
+        <tbody >
         {animals.map((animals, id) => (
-          <tbody key={id}>
-            <tr>
+          
+            <tr key={id}>
               <th scope="row">{id+=1}</th>
               <td>{animals.name}</td>
               <td>{animals.type}</td>
@@ -35,10 +36,11 @@ const DisplayMatches = (props) => {
               <td>{animals.shelterName}</td>
               <td><a className="url-color" href={animals.adoptionUrl}> {animals.adoptionUrl} </a></td>
             </tr>
-          </tbody>
+          
         ))
         }
-      </div>
+        </tbody>
+
     </Table>
   );
 }
