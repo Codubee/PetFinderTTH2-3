@@ -18,23 +18,18 @@ app.post('/addAnimal', function (req, res) {
         })
 })
 
-/* Function that will return a user's matches */
-app.get('/getMatches', function (req, res) {
+//this function will return the animal descriptions
+app.get('/getAnimalDescription', function (req, res) {
 
-    //log query parameters
-    let id = req.query.id; 
-
-    //use axios to call /animal/getMatches
-    axios.get('https://codubee-projects-api.herokuapp.com/animal/getMatches?id='+id)
+    axios.get('https://codubee-projects-api.herokuapp.com/animal/getAnimalDescription')
     .then(function (response) {
-        // handle success and send back a 200 response with the data
         console.log(response.data);
         res.status(200).json(response.data);
     })
-    //catch errors 
+    //handle errors 
     .catch(function (error) {
         console.log(error)
-        res.status(400).json({error:"[ERROR] Could not retrieve matches"});
+        res.status(400).json({error:"An error occurred"});
     })
 })
 
