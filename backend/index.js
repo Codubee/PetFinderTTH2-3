@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const axios = require('axios');
+var cors = require('cors')
 app.use(express.json());
+app.use(cors())
 
 /* function which receives the animal data in the body or postman and adds it to a specific user */
 app.post('/addAnimal', function (req, res) {
@@ -33,4 +35,4 @@ app.get('/getAnimalDescription', function (req, res) {
     })
 })
 
-app.listen(8080, () => console.log('Listening at locahost:8080'))
+app.listen(process.env.PORT || 8080, () => console.log('Listening at locahost:8080'))
