@@ -9,7 +9,7 @@ import axios from 'axios'
 class Match extends React.Component{
     constructor(props) {
         super(props)
-        this.state = { isOpen: false, age:''}
+        this.state = { isOpen: false}
         this.setIsOpen = this.setIsOpen.bind(this)
         this.triggerApi = this.triggerApi.bind(this);
     }
