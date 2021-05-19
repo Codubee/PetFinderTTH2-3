@@ -18,7 +18,7 @@ class Api extends React.Component {
     // It is the first called method during a components lifecycle
     constructor(props) {
         super(props);
-        // Creating a state object with an empty age
+        // Creating a state object with empty weather
         this.state = { weather: '' };
     }
 
@@ -35,11 +35,11 @@ class Api extends React.Component {
                 // Print the data to the console located in your web browser
                 console.log(response.data);
 
-                // Change the value of age in your state object
+                // Change the value of weather in your state object
                 this.setState({
                     
                     // Response.data has the data that came back from the GET http request
-                    age: response.data.weather
+                    weather: response.data.weather
                 })
             })
     }
@@ -49,7 +49,7 @@ class Api extends React.Component {
     render() {
 
         return (
-            // Display the age to the user that comes back from the API request
+            // Display the weather to the user that comes back from the API request
             <div>
                 <h3>Weather: {this.state.weather}</h3>
             </div>
