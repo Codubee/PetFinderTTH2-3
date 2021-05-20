@@ -38,7 +38,6 @@ app.get('/getAnimalDescription', function (req, res) {
 
 //This function will return the weather
 app.get('/getWeather', function (req, res){
-
     axios.get('https://codubee-projects-api.herokuapp.com/translate/getWeather')
     .then(function (response){
         console.log(response.data);
@@ -48,6 +47,19 @@ app.get('/getWeather', function (req, res){
         console.log(error);
         res.status(400).json({error: "An error occured"});
     })
+})
+
+// this function will return the weather description
+app.get('/getWeatherDescription', function(req, res) {
+    axios.get('https://codubee-projects-api.herokuapp.com/translate/getWeatherDescription')
+    .then(function(response) {
+        console.log(response.data);
+        res.status(200).json(response.data)
+    })
+    .catch(function(error) {
+        console.log(error)
+        res.status(400).json({error: "An error occurred."});
+    }) 
 })
 
 app.listen(process.env.PORT || 8080, () => console.log('Listening at locahost:8080'))
