@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Explanation from './Explanation';
+import Explanation from '../components/Explanation';
 
 /* Tests to check that Explanation component renders all required text. */
 
