@@ -8,7 +8,7 @@ function AnimalDescription(props) {
             <p>Type: {props.type}</p> 
             <p>Sex: {props.sex}</p>
             <p>Shelter: {props.shelter_name}</p>
-            <a href={props.application_url}>Link</a>
+            <a href={props.adoption_url}>Link</a>
         </div>
     );
 }
