@@ -11,9 +11,9 @@ class Match extends React.Component{
         super(props)
         this.state = { isOpen: false}
         this.setIsOpen = this.setIsOpen.bind(this)
-        this.triggerApi = this.triggerApi.bind(this);
+        this.addAnimal = this.addAnimal.bind(this);
     }
-    triggerApi() {
+    addAnimal() {
         var body = {
             "id":1,
             "record": {
@@ -40,7 +40,7 @@ class Match extends React.Component{
         <Container className="text-center pt-md">
             <DisplayAnimal/>
             <AnimalDescription/>
-            <button onClick={this.triggerApi} className="YesButton">
+            <button onClick={this.addAnimal} className="YesButton">
                 Yes
             </button>
             <button className="NoButton">
