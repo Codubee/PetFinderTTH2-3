@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const axios = require('axios');
-var cors = require('cors')
+var cors = require('cors');
+const { response } = require('express');
 app.use(express.json());
 app.use(cors())
 
@@ -32,6 +33,20 @@ app.get('/getAnimalDescription', function (req, res) {
     .catch(function (error) {
         console.log(error)
         res.status(400).json({error:"An error occurred"});
+    })
+})
+
+//This function will return the weather
+app.get('/getWeather', function (req, res){
+
+    axios.get('https://codubee-projects-api.herokuapp.com/translate/getWeather')
+    .then(function (response){
+        console.log(response.data);
+        res.status(200).json(response.data);
+    })
+    .catch(function(error){
+        console.log(error);
+        res.status(400).json({error: "An error occured"});
     })
 })
 
