@@ -1,14 +1,15 @@
 import React from 'react'
 
 function AnimalDescription(props) {
+
     return(
         <div>
             <br></br>
-            <p>Name:{props.name}</p> 
-            <p>Type: {props.type}</p> 
-            <p>Sex: {props.sex}</p>
-            <p>Shelter: {props.shelter_name}</p>
-            <a href={props.application_url}>Link</a>
+            <p>Name:{props.animal.name}</p> 
+            <p>Type: {props.animal.type}</p> 
+            <p>Sex: {props.animal.sex}</p>
+            <p>Shelter: {props.animal.shelter_name}</p>
+            <a href={props.animal.adoption_url}>View Pet</a>
         </div>
     );
 }
