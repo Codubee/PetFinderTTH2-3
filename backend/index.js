@@ -36,6 +36,20 @@ app.get('/getAnimalDescription', function (req, res) {
     })
 })
 
+app.get('/getMatches', function (req, res) {
+
+    axios.get('https://codubee-projects-api.herokuapp.com/animal/getMatches?id='+req.query.id)
+    .then(function (response) {
+        console.log(response.data);
+        res.status(200).json(response.data);
+    })
+    //handle errors 
+    .catch(function (error) {
+        console.log(error)
+        res.status(404).json({error:"An error occurred"});
+    })
+})
+
 //This function will return the weather
 app.get('/getWeather', function (req, res){
 

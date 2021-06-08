@@ -9,10 +9,11 @@ import axios from 'axios'
 class Match extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { isOpen: false, data: {}, id: 0 }
+        this.state = { isOpen: false, data: {}, id: 0,matches:[] }
         this.setIsOpen = this.setIsOpen.bind(this)
         this.addAnimal = this.addAnimal.bind(this);
         this.getDescription = this.getDescription.bind(this)
+        this.getMatches = this.getMatches.bind(this)
     }
 
     componentDidMount() {
@@ -41,9 +42,20 @@ class Match extends React.Component {
                 })
             })
     }
+
+    getMatches() {
+        axios.get('/getMatches?id='+this.state.id)
+            .then((response) => {
+                this.setState({
+                    matches: response.data
+                })
+            })
+    }
+
     setIsOpen() {
         var open = !this.state.isOpen;
         this.setState({ isOpen: open })
+        this.getMatches()
     }
 
     render() {
@@ -62,7 +74,7 @@ class Match extends React.Component {
                 <div>
                     <Button color="info" className="collapse-button" onClick={this.setIsOpen} >Matches</Button>
                     <Collapse isOpen={this.state.isOpen}>
-                        <DisplayMatches />
+                        <DisplayMatches matches={this.state.matches}/>
                     </Collapse>
                 </div>
             </Container>
